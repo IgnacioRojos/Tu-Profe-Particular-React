@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-const ItemDetail =({nombre,materia,id,provincia})=>{
+const ItemDetail =({nombre,materia,provincia})=>{
 
 
     return (

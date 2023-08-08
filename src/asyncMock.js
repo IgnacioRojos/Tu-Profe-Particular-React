@@ -30,7 +30,7 @@ export const getProfes = ()=>{
 export const getProfesId = async (profeId)=>{
     return new Promise((resolve)=>{
         setTimeout (() => {
-            resolve(profes.find(prof => parseInt(prof.id) == profeId))
+            resolve(profes.find(prof => prof.id == profeId))
         }, 500);
 
     })

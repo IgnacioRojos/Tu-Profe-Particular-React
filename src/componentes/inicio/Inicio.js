@@ -7,21 +7,13 @@ const Inicio = ()=>{
     return(
         <div className="container">
             <div className="row">
-                <div className="col-lg-12">
-                    <p>
-                        lorem ipsum dolor sit amet, consectetur adip
-                    </p>
-                </div>
-            </div>
-
-            <div className="row">
                 <Navbar variant="dark" bg="dark" expand="lg">
                     <Container fluid>
-                        <Navbar.Brand href="#home">Buscar Profe Por Provincia:</Navbar.Brand>
+                        <Navbar.Brand href="#home">Buscar Profe Por Materia:</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbar-dark-example" />
                         <Navbar.Collapse id="navbar-dark-example">
                         <Nav>
-                            <NavDropdown id="nav-dropdown-dark-example" title="Provincia" menuVariant="dark">
+                            <NavDropdown id="nav-dropdown-dark-example" title="materia" menuVariant="dark">
                             <NavDropdown.Item id="matematicas">Matematicas</NavDropdown.Item>
                             <NavDropdown.Item id="lengua">Lengua</NavDropdown.Item>
                             <NavDropdown.Item id="quimica">Quimica</NavDropdown.Item>
@@ -32,6 +24,14 @@ const Inicio = ()=>{
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
+            </div>
+
+            <div className="row">
+                <div className="col-lg-12">
+                    <p>
+                        lorem ipsum dolor sit amet, consectetur adip
+                    </p>
+                </div>
             </div>
         </div>
     )
