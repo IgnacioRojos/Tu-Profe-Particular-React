@@ -1,7 +1,17 @@
 .imgTitulo{
+    margin-top: 2px;
     margin-right: 10px;
+    border-radius: 20px;
 }
 
 .header{
     margin-left: 10px;
+    padding-left: 20px;
+    
 }
+
+.botonNav{
+    padding-left: 20px;
+   
+}
+

@@ -1,0 +1,13 @@
+.texto{
+    text-align: center;
+}
+
+.video{
+    display: grid;
+    margin-top: 10px;
+    margin-left: 197px;
+}
+
+.containter{
+    overflow-x: hidden;
+}
