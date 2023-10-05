@@ -19,7 +19,6 @@ const DetalleProfes = ()=>{
     },[profesoresId])
 
    
-    console.log(getProfesId())
 
 
 
