@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 🎓 Tu Profe Particular - React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🌐 **[Ver demo en Netlify](#)**
 
-## Available Scripts
+**Tu Profe Particular** es una aplicación desarrollada en **React JS** que simula un e-commerce educativo donde los estudiantes pueden buscar, explorar y agregar al carrito diferentes clases particulares de materias de interés.
 
-In the project directory, you can run:
+Esta app está pensada como **práctica de React y simulación de flujo de compra**, utilizando una **base de datos local para la gestión de cursos** y demostrando habilidades de rutas dinámicas, manejo de estados, uso de contextos y modularización de componentes en React.
 
-### `npm start`
+**🔹 Con Tu Profe Particular podrás:**
+✅ Visualizar un catálogo de cursos con precios e imágenes.  
+✅ Filtrar por categorías para encontrar la materia deseada.  
+✅ Consultar los detalles de cada curso.  
+✅ Agregar cursos al carrito con control de cantidad.  
+✅ Simular la compra de cursos con cálculo de total.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🌟 **Características principales**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ Catálogo de cursos con imágenes, precios y descripciones  
+✅ Filtrado de cursos por categoría  
+✅ Vista de detalle de cada curso  
+✅ Carrito de compras con control de unidades  
+✅ Actualización de stock en tiempo real con Firebase  
+✅ Preparado para integración de pasarela de pagos en futuras versiones
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ **Tecnologías utilizadas**
 
-### `npm run build`
+- **React JS** (react, react-dom, react-router-dom)
+- **Firebase Firestore** (para stock y almacenamiento de cursos)
+- **Bootstrap** (diseño responsivo)
+- **JavaScript ES6+**
+- **CSS3**
+- **Git y GitHub**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 **Estructura de componentes**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Componente | Descripción |
+|------------|-------------|
+| Navbar | Barra de navegación con filtros |
+| ItemListContainer | Renderizado de cursos disponibles |
+| ItemDetailContainer | Detalle del curso seleccionado |
+| Item | Tarjeta individual de curso |
+| ItemDetail | Vista detallada del curso |
+| Cart | Carrito de compras con productos |
+| Checkout | Finalización de compra y actualización de stock |
+| Context | Manejo de estados globales |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🚀 Instalación y ejecución local
+1️⃣ Clonar el repositorio:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+git clone https://github.com/IgnacioRojos/Tu-Profe-Particular-React.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2️⃣ Instalar dependencias:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
 
-## Learn More
+3️⃣ Ejecutar la aplicación en modo desarrollo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+La aplicación se abrirá automáticamente en http://localhost:3000.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🌐 También puedes ver la aplicación en producción aquí: 
