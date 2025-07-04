@@ -1,28 +1,66 @@
-import "./contacto.css";
+import React, { useState } from 'react';
+import './contacto.css';
 
-const Nosotros = () =>{
-    
-    return(
-        <div className="containter">
-            <div className="row">
-                <div class="col-lg-12 col-12 texto">
-				    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit fuga expedita placeat molestiae. Exercitationem corporis cumque, accusamus placeat dicta quibusdam magni perspiciatis totam autem rem quam. A cum, enim.
-				    </p>
-			    </div>
-            </div>
+const Contacto = () => {
+  const [formulario, setFormulario] = useState({
+    nombre: '',
+    email: '',
+    mensaje: ''
+  });
 
-            <div className="row">
-                <div class="col-lg-12 col-12">
-				    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/hY5abbglUJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			    </div>
-            </div>
+  const handleChange = (e) => {
+    setFormulario({
+      ...formulario,
+      [e.target.name]: e.target.value
+    });
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí podés integrar EmailJS, Formspree, o tu backend
+    alert('Mensaje enviado. ¡Gracias por contactarnos!');
+    setFormulario({ nombre: '', email: '', mensaje: '' });
+  };
 
-            
-        </div>
-        
-    )
-}
+  return (
+    <div className="contacto-container">
+      <h2>📬 Contacto</h2>
+      <p>¿Tenés alguna duda o querés más información? ¡Escribinos!</p>
+      <form onSubmit={handleSubmit} className="contacto-form">
+        <label htmlFor="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          value={formulario.nombre}
+          onChange={handleChange}
+          required
+        />
 
-export default Nosotros;
+        <label htmlFor="email">Correo Electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formulario.email}
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="mensaje">Mensaje</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          value={formulario.mensaje}
+          onChange={handleChange}
+          required
+        ></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  );
+};
+
+export default Contacto;

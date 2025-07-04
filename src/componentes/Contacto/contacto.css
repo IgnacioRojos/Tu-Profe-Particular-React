@@ -1,13 +1,60 @@
-.texto{
-    text-align: center;
+.contacto-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.video{
-    display: grid;
-    margin-top: 10px;
-    margin-left: 197px;
+.contacto-container h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
 
-.containter{
-    overflow-x: hidden;
+.contacto-container p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-form label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+  font-size: 1rem;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: #198754;
+  outline: none;
+}
+
+.contacto-form button {
+  padding: 12px;
+  background-color: #198754;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contacto-form button:hover {
+  background-color: #145c32;
 }

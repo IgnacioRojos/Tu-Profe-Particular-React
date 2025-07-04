@@ -5,3 +5,28 @@
 .fila{
     padding-top: 50px;
 }
+
+.welcome-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-container h1 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.welcome-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.welcome-container li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}

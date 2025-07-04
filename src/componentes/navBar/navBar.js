@@ -16,6 +16,8 @@ const NavBar = () =>{
 
             <Link to={"/Contacto"} className='botonNav'><Button variant="primary" className='botonN'>Contacto</Button></Link>
 
+             <Link to={"/Ejercicios"} className='botonNav'><Button variant="primary" className='botonN'>Ejercicios</Button></Link>
+
         </nav>
     
         
