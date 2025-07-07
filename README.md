@@ -1,6 +1,6 @@
 # 🎓 Tu Profe Particular - React JS
 
-🌐 **[Ver demo en Netlify](#)**
+🌐 **[Ver demo en Netlify](#)**: https://sage-pegasus-304db4.netlify.app/
 
 **Tu Profe Particular** es una aplicación desarrollada en **React JS** que simula un e-commerce educativo donde los estudiantes pueden buscar, explorar y agregar al carrito diferentes clases particulares de materias de interés.
 
@@ -65,4 +65,4 @@ npm start
 
 La aplicación se abrirá automáticamente en http://localhost:3000.
 
-🌐 También puedes ver la aplicación en producción aquí: 
+🌐 También puedes ver la aplicación en producción aquí: https://sage-pegasus-304db4.netlify.app/
