@@ -1,14 +1,14 @@
 import Item from "../item/Item";
-import "./listadoProfes.css"
-const ListadoProfes= ({pro}) =>{
+import "./listadoProfes.css";
 
-    return(
+const ListadoProfes = ({ pro }) => {
+    return (
         <div className="listGroup">
-            {pro.map(a => <Item key={a.id}{...a}/>)}
+            {pro.map((profe) => (
+                <Item key={profe.id} {...profe} />
+            ))}
         </div>
-    )
-
-
-}
+    );
+};
 
 export default ListadoProfes;

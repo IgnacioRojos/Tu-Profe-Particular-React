@@ -4,15 +4,12 @@ import { Bounce } from "react-awesome-reveal";
 import ListadoProfes from "../contendor Profes/listadoProfes";
 import "./profes.css"
 import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Container from 'react-bootstrap/Container';
+
 
 const Profesores = ()=>{
     const [profes, setProfes]= useState([])
     const {profeCategoria}= useParams()
+    const [materiaSeleccionada, setMateriaSeleccionada] = useState("");
     useEffect(()=>{
 
         const asyncFunc = profeCategoria  ? ()=> getProfesCategoria(profeCategoria) : getProfes
@@ -35,7 +32,9 @@ const Profesores = ()=>{
             })
     },[]);*/
 
-
+    const profesFiltrados = materiaSeleccionada === ""
+        ? profes
+        : profes.filter((profe) => profe.materia === materiaSeleccionada);
 
     
     
@@ -50,30 +49,26 @@ const Profesores = ()=>{
         )
     }else{
         return(
+            
             <div>
                 <div className="row">
-                    <Navbar variant="light" bg="light" expand="lg" className='buscaProfe'>
-                        <Container fluid>
-                            <Navbar.Brand href="#home">Buscar Profe Por Materia:</Navbar.Brand>
-                            <Navbar.Toggle aria-controls="navbar-dark-example" />
-                            <Navbar.Collapse id="navbar-dark-example">
-                            <Nav>
-                                <NavDropdown id="nav-dropdown-dark-example" title="materia" menuVariant="dark">
-                                <NavDropdown.Item>
-                                <NavLink to={`materia/100`}>{({ isActive, isPending }) => (<span className={isActive ? "active" : ""}>matematicas</span>)}</NavLink>
-                                </NavDropdown.Item>
-                                
+                    <div className="filtro-materia ">
+                        <select value={materiaSeleccionada} onChange={(e) => setMateriaSeleccionada(e.target.value)}>
+                            <option value="">Todas las materias</option>
+                            <option value="Matemática">Matemática</option>
+                            <option value="Inglés">Inglés</option>
+                            <option value="Física">Física</option>
+                            <option value="Historia">Historia</option>
+                        </select>
+                    </div>
 
-                                
-                          
-                                </NavDropdown>
-                            </Nav>
-                            </Navbar.Collapse>
-                        </Container>
-                    </Navbar>
+
+
+
+
                 </div>
-
-                <ListadoProfes pro={profes}/>
+                
+                <ListadoProfes pro={profesFiltrados}/>
             </div>
         )
     }
