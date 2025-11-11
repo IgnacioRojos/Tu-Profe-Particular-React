@@ -1,30 +1,29 @@
 import Estudio from "./img/chicoEstudiando.jpg";
+import { Link } from "react-router-dom";
 import "./inicio.css";
 
 
 
 const Inicio = ()=>{
     return(
-        <div className="container">
-            <div className="row fila">
-                <div className="welcome-container">
-                    <h1 role="img" aria-label="profesor">🧑‍🏫 Bienvenido a <strong>Tu Profe Particular</strong></h1>
-                    <p>Esta plataforma te permite encontrar profesores particulares según la materia y nivel que necesites.</p>
-                    <ul>
-                        <li>✔️ Navegá por las materias disponibles.</li>
-                        <li>✔️ Explorá los perfiles de los profes, con su experiencia y disponibilidad.</li>
-                        <li>✔️ Agregá tus favoritos y contactalos fácilmente.</li>
-                    </ul>
+        <div className="inicio">
+            <div className="hero-content">
+                <div className="texto">
+                    <h1>🧑‍🏫 Tu Profe Particular</h1>
+                    <h2>Conectá con los mejores docentes, rápido y sin complicaciones.</h2>
                     <p>
-                        El objetivo es conectar alumnos con docentes de forma <strong>simple, rápida y gratuita</strong>.
+                        Encontrá profesores particulares por materia, nivel y ubicación.
+                        Simple, accesible y pensado para vos.
                     </p>
+                    <div className="botones">
+                        <Link to="/Profes" className="btn-principal">Ver Profes</Link>
+                        <Link to="/Contacto" className="btn-principal">Publicar como Profe</Link>
+                    </div>
                 </div>
-                <div className='col-lg-6'>
-                    <img src={Estudio} className='fotoNene'/>
+                <div className="imagen">
+                    <img src={Estudio} alt="Estudiante estudiando" />
                 </div>
             </div>
-
-       
         </div>
     )
 }

@@ -1,32 +1,27 @@
-
 import Card from 'react-bootstrap/Card';
-import "./item.css"
-import React from "react";
 import Button from 'react-bootstrap/Button';
 import Foto from "./img/foto perfil.jpeg";
 import { Link } from 'react-router-dom';
+import "./item.css";
 
+const Item = ({ nombre, materia, id, provincia }) => {
+  return (
+    <Card className="tarjeta">
+      <Card.Img variant="top" src={Foto} className="tarjeta-img" />
 
+      <Card.Body className="tarjeta-body">
+        <Card.Title className="tarjeta-titulo">{nombre}</Card.Title>
+        <Card.Text className="tarjeta-texto">
+          <strong>Materia:</strong> {materia} <br />
+          <small className="tarjeta-provincia">📍 {provincia}</small>
+        </Card.Text>
 
-const Item = ({nombre,materia,id,provincia})=>{
-    return(
-        <Card style={{ width: '18rem' }} className='tarjeta'>
-
-            <Card.Img variant="top" src={Foto} />
-            
-            <Card.Body>
-
-                <Card.Title><h3>{nombre}</h3></Card.Title>
-
-                <Card.Text>
-                    <span>{nombre} Se Dedica A Dar La Materia: {materia}</span>
-                </Card.Text>
-
-                <Button variant="info"><Link to={`/Item/${id}`}>Ver Detalle</Link></Button>
-
-            </Card.Body>
-        </Card>
-    )
-}
+        <Link to={`/Item/${id}`}>
+          <Button className="btn-detalle">Ver Detalle</Button>
+        </Link>
+      </Card.Body>
+    </Card>
+  );
+};
 
 export default Item;

@@ -1,60 +1,108 @@
 .contacto-container {
   max-width: 600px;
-  margin: 50px auto;
-  padding: 40px 30px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 80px auto;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, var(--color-blanco), var(--color-bg-light));
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
 }
 
 .contacto-container h2 {
-  color: #2c3e50;
+  color: var(--color-naranja);
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .contacto-container p {
-  color: #555;
-  margin-bottom: 25px;
+  color: var(--color-texto-secundario);
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .contacto-form {
   display: flex;
   flex-direction: column;
+  gap: 18px;
+  text-align: left;
 }
 
 .contacto-form label {
-  margin-bottom: 5px;
   font-weight: 600;
+  color: var(--color-texto-principal);
 }
 
 .contacto-form input,
 .contacto-form textarea {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-  transition: border 0.3s ease;
+  padding: 12px 14px;
+  border: 1.8px solid #ddd;
+  border-radius: 10px;
   font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-blanco);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
 .contacto-form input:focus,
 .contacto-form textarea:focus {
-  border-color: #198754;
+  border-color: var(--color-naranja);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.15);
 }
 
-.contacto-form button {
-  padding: 12px;
-  background-color: #198754;
-  color: white;
+/* Botón principal */
+.boton {
+  padding: 14px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border: none;
-  border-radius: 8px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(255, 140, 0, 0.2);
 }
 
-.contacto-form button:hover {
-  background-color: #145c32;
+.boton:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.boton:active {
+  transform: scale(0.98);
+  background-color: var(--color-primary);
+}
+
+/* 💫 Animación suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsivo */
+@media (max-width: 600px) {
+  .contacto-container {
+    padding: 40px 25px;
+    margin: 60px 15px;
+  }
+
+  .contacto-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .contacto-form button {
+    font-size: 1rem;
+  }
 }

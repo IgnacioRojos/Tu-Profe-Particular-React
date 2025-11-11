@@ -1,36 +1,90 @@
-.tituloAlerta{
-    margin-top: 150px;
-    text-align: center;
+/* 📌 ESTADO DE CARGA */
+.tituloAlerta {
+  margin-top: 150px;
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--color-naranja);
+  font-weight: 600;
+  animation: pulse 2s infinite;
 }
 
+/* 🧮 FILTRO DE MATERIAS */
 .filtro-materia {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 60px 0;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 .filtro-materia select {
-    padding: 12px 18px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-    background: linear-gradient(135deg, #ffffff, #f8f8f8);
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--color-borde-claro);
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(145deg, #ffffff, #f6f6f6);
+  color: var(--color-texto-principal);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-suave);
 }
 
 .filtro-materia select:hover {
-    border-color: #0d6efd; /* azul bootstrap */
-    box-shadow: 0 6px 12px rgba(13, 110, 253, 0.15);
+  border-color: var(--color-naranja);
+  box-shadow: var(--shadow-medio);
+  transform: scale(1.02);
 }
 
 .filtro-materia select:focus {
-    outline: none;
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
-    background: #f0f8ff;
+  outline: none;
+  border-color: var(--color-naranja);
+  box-shadow: 0 0 0 4px rgba(230, 106, 0, 0.2);
+  background: #fff6ee;
+}
+
+/* 🎓 CONTENEDOR DE PROFESORES */
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 💫 ANIMACIONES */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+  .filtro-materia {
+    flex-direction: column;
+    margin: 30px 0;
+  }
+
+  .filtro-materia select {
+    width: 80%;
+    text-align: center;
+  }
+
+  .tituloAlerta {
+    font-size: 1.3rem;
+  }
 }

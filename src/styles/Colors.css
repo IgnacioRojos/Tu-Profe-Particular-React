@@ -1,0 +1,26 @@
+:root {
+  /* 🎨 Paleta principal */
+  --color-primary: #F57C00;   /* Naranja principal */
+  --color-secondary: #1976D2; /* Azul complementario */
+  
+  /* 🩶 Colores neutros */
+  --color-bg-light: #F5F7FA;
+  --color-bg-dark: #0D1B2A;
+  --color-white: #FFFFFF;
+
+  /* 🖋️ Texto */
+  --color-text-main: #212121;
+  --color-text-secondary: #555;
+
+  /* 🧩 Bordes y elementos */
+  --color-border: #E0E0E0;
+
+  /* ✅ Estados */
+  --color-success: #43A047;
+  --color-error: #E53935;
+
+  /* 🌙 Sombras y opacidades */
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.25);
+}

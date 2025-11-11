@@ -1,4 +1,72 @@
-.listGroup{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
+.listGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Animación de aparición */
+.listGroup .tarjeta {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: aparecer 0.6s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  background-color: var(--color-blanco);
+}
+
+.listGroup .tarjeta:nth-child(1) { animation-delay: 0.1s; }
+.listGroup .tarjeta:nth-child(2) { animation-delay: 0.2s; }
+.listGroup .tarjeta:nth-child(3) { animation-delay: 0.3s; }
+.listGroup .tarjeta:nth-child(4) { animation-delay: 0.4s; }
+.listGroup .tarjeta:nth-child(5) { animation-delay: 0.5s; }
+
+/* Efecto hover */
+.listGroup .tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Botón dentro de la tarjeta */
+.listGroup .tarjeta button a {
+  text-decoration: none;
+  color: var(--color-blanco);
+}
+
+.listGroup .tarjeta button {
+  background-color: var(--color-naranja);
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.listGroup .tarjeta button:hover {
+  background-color: var(--color-dorado);
+  transform: scale(1.05);
+}
+
+/* Animación */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsivo */
+@media (max-width: 992px) {
+  .listGroup {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
 }

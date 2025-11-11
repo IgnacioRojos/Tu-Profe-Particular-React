@@ -10,13 +10,13 @@ const NavBar = () =>{
 
             <Link to={"/"}><img className='imgTitulo' src={foto} width="90px"/></Link>
 
-            <Link to={"/"} className='botonNav'><Button variant="primary" className='botonN'>Inicio</Button></Link>
+            <Link to={"/"} className='botonNav'><Button  className='botonN'>Inicio</Button></Link>
             
-            <Link to={"/Profes"} className='botonNav'><Button variant="primary" className='botonN'>Profes</Button></Link>
+            <Link to={"/Profes"} className='botonNav'><Button className='botonN'>Profes</Button></Link>
 
-            <Link to={"/Contacto"} className='botonNav'><Button variant="primary" className='botonN'>Contacto</Button></Link>
+            <Link to={"/Contacto"} className='botonNav'><Button  className='botonN'>Contacto</Button></Link>
 
-             <Link to={"/Ejercicios"} className='botonNav'><Button variant="primary" className='botonN'>Ejercicios</Button></Link>
+             <Link to={"/Ejercicios"} className='botonNav'><Button  className='botonN'>Ejercicios</Button></Link>
 
         </nav>
     

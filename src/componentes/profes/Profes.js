@@ -23,15 +23,6 @@ const Profesores = ()=>{
             })
     },[profeCategoria]);
 
-        /*getProfes()
-            .then(response=>{
-                setProfes(response)
-            })
-            .catch(err=>{
-                console.error(err)
-            })
-    },[]);*/
-
     const profesFiltrados = materiaSeleccionada === ""
         ? profes
         : profes.filter((profe) => profe.materia === materiaSeleccionada);
@@ -81,18 +72,3 @@ export default Profesores;
 
  
 
-/*<NavLink to={`materia/2`} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
-
-<NavDropdown.Item>Lengua</NavDropdown.Item>
-
-</NavLink>
-
-<NavLink to={`materia/3`} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
-<NavDropdown.Item>Quimica</NavDropdown.Item>
-</NavLink>
-
-<NavLink to={`materia/4`} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
-<NavDropdown.Item id="universitarios">Universitarios</NavDropdown.Item>  
-</NavLink>
-
-</NavDropdown>*/

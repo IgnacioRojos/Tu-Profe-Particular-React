@@ -1,5 +1,4 @@
 import Foto from "./img/foto perfil.jpeg"
-import React from "react";
 import Button from 'react-bootstrap/Button';
 import "./itemDetail.css"
 

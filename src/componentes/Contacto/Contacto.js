@@ -57,7 +57,7 @@ const Contacto = () => {
           required
         ></textarea>
 
-        <button type="submit">Enviar mensaje</button>
+        <button type="submit" className='boton'>Enviar mensaje</button>
       </form>
     </div>
   );
