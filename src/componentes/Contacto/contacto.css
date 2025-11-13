@@ -79,7 +79,7 @@
   background-color: var(--color-primary);
 }
 
-/* 💫 Animación suave */
+/* Animación suave */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -91,7 +91,7 @@
   }
 }
 
-/* 📱 Responsivo */
+/* Responsivo */
 @media (max-width: 600px) {
   .contacto-container {
     padding: 40px 25px;

@@ -53,6 +53,6 @@
 }
 
 .btn-detalle:hover {
-  background-color: var(--color-accent) !important;
+  background-color: var(--color-primary) !important;
   transform: scale(1.05);
 }

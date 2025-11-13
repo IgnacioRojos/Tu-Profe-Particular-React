@@ -1,4 +1,4 @@
-/* 📌 ESTADO DE CARGA */
+/* ESTADO DE CARGA */
 .tituloAlerta {
   margin-top: 150px;
   text-align: center;
@@ -8,12 +8,13 @@
   animation: pulse 2s infinite;
 }
 
-/* 🧮 FILTRO DE MATERIAS */
+/* FILTRO DE MATERIAS */
 .filtro-materia {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 40px 0 60px 0;
+  padding-top: 30px;
   font-family: 'Segoe UI', sans-serif;
   animation: fadeIn 0.6s ease-in-out;
 }
@@ -44,14 +45,14 @@
   background: #fff6ee;
 }
 
-/* 🎓 CONTENEDOR DE PROFESORES */
+/* CONTENEDOR DE PROFESORES */
 .row {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* 💫 ANIMACIONES */
+/* ANIMACIONES */
 @keyframes pulse {
   0%, 100% {
     opacity: 0.6;
@@ -72,7 +73,7 @@
   }
 }
 
-/* 📱 RESPONSIVO */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .filtro-materia {
     flex-direction: column;

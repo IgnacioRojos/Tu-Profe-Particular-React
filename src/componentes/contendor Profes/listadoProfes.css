@@ -62,7 +62,7 @@
   }
 }
 
-/* 📱 Responsivo */
+/* Responsivo */
 @media (max-width: 992px) {
   .listGroup {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4rem 29rem; /* 🔧 Menor altura y ancho */
+  padding: 0.4rem 29rem; 
   background-color: var(--color-white) !important;
   box-shadow: var(--shadow-soft) !important;
   position: sticky;
@@ -46,12 +46,12 @@
 }
 
 .botonN:hover {
-  background-color: #e56f00 !important; /* tono más oscuro del naranja */
+  background-color: #e56f00 !important; 
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium) !important;
 }
 
-/* 🌙 Estilo responsivo (móvil) */
+/* Estilo responsivo */
 @media (max-width: 768px) {
   .header {
     flex-wrap: wrap;

@@ -1,153 +1,165 @@
-/* SECCIÓN PRINCIPAL */
 .inicio {
-  background: linear-gradient(
-    135deg,
-    var(--color-fondo-claro),
-    var(--color-blanco)
-  );
-  padding: 5rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-main);
+  padding: 4rem 2rem;
+  overflow-x: hidden;
 }
 
-/* CONTENEDOR HERO */
 .hero-content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1200px;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
   gap: 3rem;
-  animation: fadeIn 0.6s ease-in-out;
+  margin-bottom: 4rem;
 }
 
-/* TEXTO PRINCIPAL */
 .texto {
-  flex: 1;
-  min-width: 320px;
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.7;
-  color: var(--color-texto-principal);
+  max-width: 500px;
+  text-align: left;
 }
 
-.texto h1 {
-  color: var(--color-naranja);
+.titulo {
+  color: var(--color-primary);
   font-size: 2.8rem;
-  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  color: var(--color-secondary);
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
-.texto h2 {
-  color: var(--color-texto-principal);
-  font-size: 1.6rem;
-  margin-bottom: 1.2rem;
-}
-
-.texto p {
+.descripcion {
+  color: var(--color-text-secondary);
   font-size: 1.1rem;
-  color: var(--color-texto-secundario);
+  line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-/* BOTONES DE ACCIÓN */
 .botones {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .btn-principal,
 .btn-secundario {
-  text-decoration: none;
-  font-weight: 600;
   padding: 0.8rem 1.6rem;
-  border-radius: 10px;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
-  text-align: center;
-  box-shadow: var(--shadow-suave);
+  box-shadow: var(--shadow-soft);
 }
 
 .btn-principal {
-  background-color: var(--color-naranja);
-  color: var(--color-blanco);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn-principal:hover {
   background-color: #e66a00;
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-medio);
+  transform: translateY(-2px);
 }
 
 .btn-secundario {
-  background-color: var(--color-blanco);
-  color: var(--color-naranja);
-  border: 2px solid var(--color-naranja);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 .btn-secundario:hover {
-  background-color: var(--color-naranja);
-  color: var(--color-blanco);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-medio);
-}
-
-/* IMAGEN HERO */
-.imagen {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  background-color: #1155a3;
+  transform: translateY(-2px);
 }
 
 .imagen img {
-  width: 100%;
-  max-width: 480px;
-  border-radius: 20px;
-  box-shadow: var(--shadow-suave);
-  object-fit: cover;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
 }
 
-.imagen img:hover {
+/* BENEFICIOS */
+.beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.beneficio-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* RESEÑAS */
+.reseñas {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.reseñas-titulo {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.reseñas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.reseña-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 300px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.reseña-card:hover {
   transform: scale(1.03);
-  box-shadow: var(--shadow-medio);
+  box-shadow: var(--shadow-medium);
 }
 
-/* RESPONSIVO */
-@media (max-width: 992px) {
+.reseña-card p {
+  font-style: italic;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.reseña-card h4 {
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
   .hero-content {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
   }
 
-  .texto h1 {
-    font-size: 2.2rem;
-  }
-
-  .texto h2 {
-    font-size: 1.4rem;
+  .texto {
+    text-align: center;
   }
 
   .imagen img {
     max-width: 90%;
-    margin-bottom: 2rem;
-  }
-
-  .botones {
-    justify-content: center;
-  }
-}
-
-/*ANIMACIÓN DE ENTRADA */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

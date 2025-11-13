@@ -17,7 +17,6 @@ const Contacto = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí podés integrar EmailJS, Formspree, o tu backend
     alert('Mensaje enviado. ¡Gracias por contactarnos!');
     setFormulario({ nombre: '', email: '', mensaje: '' });
   };

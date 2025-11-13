@@ -1,4 +1,46 @@
-.footer{
-    margin-top: 500px;
-    text-align: center;
+.footer {
+  background-color: var(--color-bg-dark);
+  color: var(--color-white);
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--color-primary); 
+  box-shadow: var(--shadow-soft);
+}
+
+.footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--color-success); 
+  transform: scale(1.05);
+}
+
+.footer p {
+  margin: 0;
+  color: var(--color-white);
+}
+
+/* Íconos sociales  */
+.footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer .socials a {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer .socials a:hover {
+  color: var(--color-success);
+  transform: scale(1.2);
 }
