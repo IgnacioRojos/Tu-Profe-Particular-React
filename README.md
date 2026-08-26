@@ -19,15 +19,15 @@ Esta app está pensada como **práctica de React y simulación de flujo de compr
 ✅ Filtrado de cursos por categoría  
 ✅ Vista de detalle de cada curso  
 ✅ Carrito de compras con control de unidades  
-✅ Actualización de stock en tiempo real con Firebase  
-✅ Preparado para integración de pasarela de pagos en futuras versiones
+✅ Datos de profesores simulados de forma asincrónica (`asyncMock.js`)  
+✅ Preparado para integración de pasarela de pagos y backend real en futuras versiones
 
 ---
 
 ## 🛠️ **Tecnologías utilizadas**
 
 - **React JS** (react, react-dom, react-router-dom)
-- **Firebase Firestore** (para stock y almacenamiento de cursos)
+- **Datos simulados** en `asyncMock.js` (promesas con `setTimeout`, sin backend real)
 - **Bootstrap** (diseño responsivo)
 - **JavaScript ES6+**
 - **CSS3**
@@ -39,14 +39,15 @@ Esta app está pensada como **práctica de React y simulación de flujo de compr
 
 | Componente | Descripción |
 |------------|-------------|
-| Navbar | Barra de navegación con filtros |
-| ItemListContainer | Renderizado de cursos disponibles |
-| ItemDetailContainer | Detalle del curso seleccionado |
-| Item | Tarjeta individual de curso |
-| ItemDetail | Vista detallada del curso |
-| Cart | Carrito de compras con productos |
-| Checkout | Finalización de compra y actualización de stock |
-| Context | Manejo de estados globales |
+| navBar | Barra de navegación |
+| Inicio | Landing / sección de bienvenida |
+| listadoProfes | Renderizado del catálogo de profesores |
+| Profes | Tarjeta individual de profesor |
+| detalleProfes / itemDetail | Vista detallada del profesor seleccionado |
+| Item | Tarjeta individual reutilizable |
+| Ejercicios | Sección de ejercicios de práctica |
+| Contacto | Formulario de contacto |
+| footer | Pie de página |
 
 ---
 
